@@ -1,0 +1,40 @@
+<div class="px-3 py-4">
+    <div class='container'>
+        <div class="form-holder clearfix m-auto" style="max-width: 480px;">
+            <div class="row align-items-center mb-3 pb-3 border-bottom">
+                <div class="col-md-6">
+                    <h5 class="m-0">Questions</h5>
+                </div>
+                <div class="col-md-6 text-right">
+                    <strong>Score: 0/10</strong>
+                </div>
+            </div>
+
+        
+            <div class="clearfix mb-4" *ngFor="let question of retrievedQuestions">
+                <!-- Question -->
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><strong>{{question.id}}</strong></span>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="question.title" placeholder="Question title goes here">
+                </div>
+
+                <!-- Choices -->
+                <div *ngFor="let answer of retrievedAnswers"> 
+                    <div *ngIf="answer.question.id === question.id">
+                        <div class="input-group input-group-sm mb-1">
+                            <input type="text" class="form-control" maxlength="255" required [(ngModel)]="answer.content">
+                            <div class="input-group-append">
+                                <div class="input-group-text"><input type="radio" [(name)]="question.id"></div>
+                            </div>
+                        </div>
+                    </div>               
+                </div>
+            </div>
+
+
+            <button (click)="submit()" class="btn btn-primary btn-sm px-4 float-right ml-2">Submit</button>
+        </div>
+    </div>
+</div>

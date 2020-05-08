@@ -1,0 +1,63 @@
+<div class="px-3 py-4">
+    <div class='container clearfix'>
+        <div class="form-holder clearfix m-auto" style="max-width: 480px;">
+            <div class="row align-items-center mb-3">
+                <div class="col-md-6">
+                    <h5 class="m-0">Question</h5>
+                </div>
+            </div>
+
+            <!-- Question/Answers Holder -->
+            <div class="clearfix mb-4">
+                <!-- Question -->
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><strong>1</strong></span>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="question.title"
+                        placeholder="Question title goes here">
+                </div>
+
+                <!-- Choice A -->
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend"><span class="input-group-text">a</span></div>
+                    <input type="text" class="form-control" maxlength="255" required [(ngModel)]="answer.content">
+                    <div class="input-group-append">
+                        <div class="input-group-text"><input type="radio" name="answerChoices"></div>
+                    </div>
+                </div>
+
+                <!-- Choice B -->
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend"><span class="input-group-text">b</span></div>
+                    <input type="text" class="form-control" maxlength="255" required [(ngModel)]="answer.content">
+                    <div class="input-group-append">
+                        <div class="input-group-text"><input type="radio" name="answerChoices"></div>
+                    </div>
+                </div>
+
+                <!-- Choice C -->
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend"><span class="input-group-text">c</span></div>
+                    <input type="text" class="form-control" maxlength="255" required [(ngModel)]="answer.content">
+                    <div class="input-group-append">
+                        <div class="input-group-text"><input type="radio" name="answerChoices"></div>
+                    </div>
+                </div>
+
+                <!-- Choice D -->
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend"><span class="input-group-text">d</span></div>
+                    <input type="text" class="form-control" maxlength="255" required [(ngModel)]="answer.content">
+                    <div class="input-group-append">
+                        <div class="input-group-text"><input type="radio" name="answerChoices"></div>
+                    </div>
+                </div>
+                
+                <button routerLink="/quiz-teacher-home" class="btn btn-secondary btn-sm px-4 float-left">Back</button>
+                <button (click)="createQuestion()" class="btn btn-primary btn-sm px-4 float-right ml-2">Save</button>              
+            </div>
+            
+        </div>
+    </div>
+</div>
