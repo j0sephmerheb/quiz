@@ -1,5 +1,2 @@
 # quiz
-Quiz:
-- Maven
-- Rest
-- Angular
+Quiz: Maven, Rest, Angular
