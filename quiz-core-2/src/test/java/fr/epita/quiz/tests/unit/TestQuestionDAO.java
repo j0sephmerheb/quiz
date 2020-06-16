@@ -31,7 +31,7 @@ public class TestQuestionDAO {
 	@Inject
 	DataSource ds;
 	
-	
+	/*
 	@Test
 	public void testCreateMethod() {
 		//given
@@ -55,5 +55,5 @@ public class TestQuestionDAO {
 		}
 		
 	}
-	
+	*/
 }
